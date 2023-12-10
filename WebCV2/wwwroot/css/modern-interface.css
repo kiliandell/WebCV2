@@ -1,0 +1,202 @@
+﻿/* modern-interface.css */
+
+:root {
+    --main-color: #03EF87;
+    --background-color: f0f0f0;
+    --content-bg-color: #ffffff;
+}
+
+header {
+    background-color: var(--main-color);
+}
+
+.navbar-brand {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f0f0f0;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: var(--content-bg-color);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    padding: 20px 0;
+    background-color: var(--main-color);
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+#nav_bar_list {
+    padding-left: 150px;
+}
+
+/*---------------A PROPOS-------------*/
+
+#profile_img {
+    width: 100px;
+    height: 100px;
+}
+
+#profile_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#profile_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#profile_title h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#presentation_div {
+    margin-bottom: 10px;
+    align-content: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.text-center ul {
+    text-align: left;
+    list-style-position: inside;
+}
+
+/*---------------COMPETENCES-------------*/
+
+.competences-list dd {
+    margin-bottom: 50px;
+    font-size: 20px
+}
+
+.competences-list dt {
+    font-size: 22px
+}
+
+/*---------------EXPERIENCES-------------*/
+
+.experiences-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.experience-item {
+    margin-bottom: 50px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    max-width: 100%;
+}
+
+.experience-details {
+    margin-bottom: 10px;
+}
+
+.experience-title {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.experience-info {
+    font-size: 20px;
+}
+
+.experience-duree {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.experience-lieu {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.experience-description {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/*---------------FORMATIONS-------------*/
+
+.formation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.formation-item {
+    margin-bottom: 50px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    max-width: 100%;
+}
+
+.formation-details {
+    margin-bottom: 10px;
+}
+
+.formation-title {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.formation-info {
+    font-size: 20px;
+}
+
+.formation-lieu {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.formation-description {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.4;
+}

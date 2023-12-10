@@ -1,0 +1,52 @@
+﻿@page
+@model WebCV.Pages.experiencesModel
+
+@{
+    ViewData["Title"] = "Experiences";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Experiences</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/modern-interface.css" asp-append-version="true" />
+</head>
+
+<div class="text-center">
+    <h1 class="display-4 font-weight-bold">Experiences</h1>
+    <hr />
+
+    <br /> <br /> <br />
+
+    @if (Model.Experiences != null && Model.Experiences.Any())
+    {
+        <div class="experiences-container">
+            @foreach (var experience in Model.Experiences)
+            {
+                <div class="experience-item">
+                    <div class="experience-details">
+                        <p class="experience-title">@experience.title</p>
+                        <p class="experience-info">
+                            <span class="experience-duree">@experience.duree</span><br />
+                            <span class="experience-lieu">@experience.lieu</span>
+                        </p>
+                    </div>
+
+                    @if (!String.IsNullOrEmpty(experience.description))
+                    {
+                        <div class="experience-description">
+                            <p>@experience.description</p>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>Aucune experiences trouvée</p>
+    }
+    <br /><hr />
+</div>
+

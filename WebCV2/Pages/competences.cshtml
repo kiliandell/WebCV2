@@ -1,0 +1,49 @@
+﻿@page
+@model WebCV.Pages.competencesModel
+
+@{
+    ViewData["Title"] = "Competences";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Compétences</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/modern-interface.css" asp-append-version="true" />
+</head>
+
+<div class="text-center">
+    <h1 class="display-4 font-weight-bold">Compétences</h1>
+    <hr />
+
+    <br /> <br /> 
+
+    @if (Model.Competences != null && Model.Competences.Any())
+    {
+        <dl class="competences-list">
+            @foreach (var competence in Model.Competences)
+            {
+                if (!String.IsNullOrEmpty(competence.title))
+                {
+                    <dt>@competence.title.Trim()</dt>
+                    <dd>@competence.text_competences.Trim()</dd>
+                }
+                else
+                {
+                    <dt>@competence.text_competences.Trim()</dt>
+                    <dd></dd>
+                }
+            }
+        </dl>
+    }
+    else
+    {
+        <p>Aucune compétence trouvée</p>
+    }
+
+    <br /><hr />
+
+
+
+</div>

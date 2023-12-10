@@ -1,0 +1,51 @@
+﻿@page
+@model WebCV.Pages.formationsModel
+
+@{
+    ViewData["Title"] = "Formations";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Formations</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/modern-interface.css" asp-append-version="true" />
+</head>
+
+<div class="text-center">
+    <h1 class="display-4 font-weight-bold">Formations</h1>
+    <hr />
+
+    <br /> <br /> <br />
+
+    @if (Model.Formations != null && Model.Formations.Any())
+    {
+        <div class="formation-container">
+            @foreach (var formation in Model.Formations)
+            {
+                <div class="formation-item">
+                    <div class="formation-details">
+                        <p class="formation-title">@formation.title</p>
+                        <p class="formation-info">
+                            <span class="formation-lieu">@formation.lieu</span>
+                        </p>
+                    </div>
+
+                    @if (!String.IsNullOrEmpty(formation.description))
+                    {
+                        <div class="formation-description">
+                            <p>@formation.description</p>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>Aucune formations trouvée</p>
+    }
+    <br /><hr />
+</div>
+
