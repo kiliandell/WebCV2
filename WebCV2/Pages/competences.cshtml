@@ -11,31 +11,45 @@
     <title>@ViewData["Title"] - Compétences</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/modern-interface.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/competences.css" asp-append-version="true" />
 </head>
 
+<style>
+    h1 {
+        font-family: 'Lilita+One', sans-serif; 
+        font-weight: bold;
+        font-size: 2.5rem; 
+        letter-spacing: 2px; 
+    }
+</style>
+
 <div class="text-center">
-    <h1 class="display-4 font-weight-bold">Compétences</h1>
+    <h1 class="display-4 font-weight-bold animate__animated animate__fadeIn">Compétences</h1>
     <hr />
 
-    <br /> <br /> 
+    <br /> <br />  
 
     @if (Model.Competences != null && Model.Competences.Any())
     {
-        <dl class="competences-list">
+        <div class="row competences-list">
             @foreach (var competence in Model.Competences)
             {
-                if (!String.IsNullOrEmpty(competence.title))
-                {
-                    <dt>@competence.title.Trim()</dt>
-                    <dd>@competence.text_competences.Trim()</dd>
-                }
-                else
-                {
-                    <dt>@competence.text_competences.Trim()</dt>
-                    <dd></dd>
-                }
+                <div class="col-md-6">
+                    <div class="competence-card">
+                        @if (!String.IsNullOrEmpty(competence.title))
+                        {
+                            <h4>@competence.title.Trim()</h4>
+                            <p>@competence.text_competences.Trim()</p>
+                        }
+                        else
+                        {
+                           <h4>@competence.text_competences.Trim()</h4> 
+                        }
+                        
+                    </div>
+                </div>
             }
-        </dl>
+        </div>
     }
     else
     {
@@ -43,7 +57,4 @@
     }
 
     <br /><hr />
-
-
-
 </div>

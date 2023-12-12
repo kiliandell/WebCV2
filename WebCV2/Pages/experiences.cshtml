@@ -11,41 +11,53 @@
     <title>@ViewData["Title"] - Experiences</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/modern-interface.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/experiences.css" asp-append-version="true" />
 </head>
 
+<style>
+    h1 {
+        font-family: 'Lilita+One', sans-serif; 
+        font-weight: bold;
+        font-size: 2.5rem; 
+        letter-spacing: 2px; 
+    }
+</style>
+
 <div class="text-center">
-    <h1 class="display-4 font-weight-bold">Experiences</h1>
+    <h1 class="display-4 font-weight-bold animate__animated animate__fadeIn">Expériences</h1>
     <hr />
 
     <br /> <br /> <br />
 
     @if (Model.Experiences != null && Model.Experiences.Any())
     {
-        <div class="experiences-container">
+        <div class="row experiences-container">
             @foreach (var experience in Model.Experiences)
             {
-                <div class="experience-item">
-                    <div class="experience-details">
-                        <p class="experience-title">@experience.title</p>
-                        <p class="experience-info">
-                            <span class="experience-duree">@experience.duree</span><br />
-                            <span class="experience-lieu">@experience.lieu</span>
-                        </p>
-                    </div>
-
-                    @if (!String.IsNullOrEmpty(experience.description))
-                    {
-                        <div class="experience-description">
-                            <p>@experience.description</p>
+                <div class="col-md-6">
+                    <div class="experience-card">
+                        <div class="experience-details">
+                            <h4 class="experience-title">@experience.title</h4>
+                            <p class="experience-info">
+                                <span class="experience-duree">@experience.duree</span><br />
+                                <span class="experience-lieu">@experience.lieu</span>
+                            </p>
                         </div>
-                    }
+
+                        @if (!String.IsNullOrEmpty(experience.description))
+                        {
+                            <div class="experience-description">
+                                <p>@experience.description</p>
+                            </div>
+                        }
+                    </div>
                 </div>
             }
         </div>
     }
     else
     {
-        <p>Aucune experiences trouvée</p>
+        <p>Aucune expérience trouvée</p>
     }
     <br /><hr />
 </div>

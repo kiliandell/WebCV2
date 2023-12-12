@@ -1,0 +1,75 @@
+﻿/* Ajoute ces styles dans le fichier layout.css pour personnaliser la barre de navigation */
+
+.main-header {
+    background-color: #343a40; /* Couleur de fond pour le header */
+    color: #ffffff; /* Couleur du texte dans le header */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out; /* Ajout d'une transition pour le changement de couleur */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out; /* Ajout d'une transition pour le changement de couleur */
+}
+
+    .navbar-nav .nav-link:hover, .navbar-brand:hover {
+        color: #f0f0f0; /* Nouvelle couleur au survol */
+    }
+
+.navbar-toggler-icon {
+    background-color: #ffffff; /* Nouvelle couleur de l'icône du bouton de bascule */
+    transition: background-color 0.3s ease-in-out; /* Ajout d'une transition pour le changement de couleur */
+}
+
+.navbar-toggler {
+    border: none; /* Supprime la bordure du bouton de bascule */
+    background-color: #343a40; /* Couleur de fond du bouton de bascule */
+    transition: background-color 0.3s ease-in-out; /* Ajout d'une transition pour le changement de couleur */
+}
+
+    .navbar-toggler:focus {
+        outline: none; /* Supprime la bordure de focus du bouton de bascule */
+    }
+
+/* Animation pour le bouton de bascule */
+.navbar-toggler-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    transform: rotate(90deg); /* Rotation de l'icône lorsque le menu est ouvert */
+}
+
+/* Animation pour le bouton de bascule au survol */
+.navbar-toggler:hover {
+    background-color: #555d63; /* Nouvelle couleur de fond au survol */
+}
+
+/* Ajoute ces styles supplémentaires dans le fichier layout.css pour personnaliser la barre de navigation */
+
+.navbar-toggler-icon {
+    background-color: #ffffff !important; /* Forcer la couleur de fond de l'icône */
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    transform: rotate(90deg) !important; /* Forcer la rotation de l'icône lorsque le menu est ouvert */
+}
+
+/* Animation pour le bouton de bascule au survol */
+.navbar-toggler:hover {
+    background-color: #555d63 !important; /* Nouvelle couleur de fond au survol */
+}
+
+footer {
+    padding-top : 50px;
+    background-color: #ffffff;
+}

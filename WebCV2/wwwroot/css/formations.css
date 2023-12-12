@@ -1,0 +1,36 @@
+﻿.formation-container {
+    margin-top: 30px;
+}
+
+.formation-card {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+    .formation-card:hover {
+        transform: scale(1.05);
+    }
+
+    .formation-card h4 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+.formation-info {
+    font-size: 20px;
+}
+
+.formation-lieu {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.formation-description {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.4;
+}

@@ -11,40 +11,52 @@
     <title>@ViewData["Title"] - Formations</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/modern-interface.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/formations.css" asp-append-version="true" />
 </head>
 
+<style>
+    h1 {
+        font-family: 'Lilita+One', sans-serif; 
+        font-weight: bold;
+        font-size: 2.5rem; 
+        letter-spacing: 2px; 
+    }
+</style>
+
 <div class="text-center">
-    <h1 class="display-4 font-weight-bold">Formations</h1>
+    <h1 class="display-4 font-weight-bold animate__animated animate__fadeIn">Formations</h1>
     <hr />
 
     <br /> <br /> <br />
 
     @if (Model.Formations != null && Model.Formations.Any())
     {
-        <div class="formation-container">
+        <div class="row formation-container">
             @foreach (var formation in Model.Formations)
             {
-                <div class="formation-item">
-                    <div class="formation-details">
-                        <p class="formation-title">@formation.title</p>
-                        <p class="formation-info">
-                            <span class="formation-lieu">@formation.lieu</span>
-                        </p>
-                    </div>
-
-                    @if (!String.IsNullOrEmpty(formation.description))
-                    {
-                        <div class="formation-description">
-                            <p>@formation.description</p>
+                <div class="col-md-6">
+                    <div class="formation-card">
+                        <div class="formation-details">
+                            <h4 class="formation-title">@formation.title</h4>
+                            <p class="formation-info">
+                                <span class="formation-lieu">@formation.lieu</span>
+                            </p>
                         </div>
-                    }
+
+                        @if (!String.IsNullOrEmpty(formation.description))
+                        {
+                            <div class="formation-description">
+                                <p>@formation.description</p>
+                            </div>
+                        }
+                    </div>
                 </div>
             }
         </div>
     }
     else
     {
-        <p>Aucune formations trouvée</p>
+        <p>Aucune formation trouvée</p>
     }
     <br /><hr />
 </div>

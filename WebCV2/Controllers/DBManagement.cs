@@ -43,7 +43,5 @@ namespace WebCV2.Controllers
                 .AsNoTracking()
                 .ToListAsync();
         }
-
-
     }
 }
